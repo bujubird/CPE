@@ -10,9 +10,9 @@
         long long int casenum=0;
         while(testcase--){
             long long int N;
-            cout<<"N = ";
             flag[casenum]=1;
-            cin>>N;
+            char c1, c2;
+            cin >> c1 >> c2 >> N;
             long long int matrix[N*N];
             for(int i=0;i<N*N;i++){
                 cin>>matrix[i];
@@ -23,13 +23,11 @@
                     break;
                 }
             }
-            casenum++;
-        }
-        for(int i=0;i<totalcases;i++){
-            if(flag[i]==1){
-                cout<<"Test #"<<i+1<<": Symmetric"<<endl;
+            if(flag[casenum]==1){
+                cout<<"Test #"<<casenum+1<<": Symmetric."<<endl;
             }else{
-                cout<<"Test #"<<i+1<<": Non-symmetric"<<endl;
+                cout<<"Test #"<<casenum+1<<": Non-symmetric."<<endl;
             }
+            casenum++;
         }
     }
